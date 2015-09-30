@@ -1,0 +1,100 @@
+* {
+	box-sizing: border-box;
+}
+
+.card {
+	display: inline-block;
+	background-color: white;
+	background-image: url("http://www.placecage.com/300/200");
+	background-size: cover;
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+	border-radius: 10px;
+	margin-left: 40px;
+	position: relative;
+
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+
+	-webkit-perspective: 1000;
+	perspective: 1000;
+}
+
+.card:first-of-type {
+	margin-left: 0;
+}
+
+.layer2 {
+	transform: translateZ(20px);
+	-webkit-transform: translateZ(20px);
+}
+
+.layer3 {
+	transform: translateZ(30px);
+	-webkit-transform: translateZ(30px);
+}
+
+.layer4 {
+	transform: translateZ(40px);
+	-webkit-transform: translateZ(40px);
+}
+
+.layer5 {
+	transform: translateZ(50px);
+	-webkit-transform: translateZ(50px);
+}
+
+.wrapper {
+	padding: 0;
+	display: block;
+	padding-top: 100px;
+	vertical-align: middle;
+	margin: 0 auto;
+	height: 300px;
+	text-align: center;
+	width: auto;
+	max-width: 1200px;
+}
+
+.card__title {
+	background: rgba(0,0,0,0.5);
+	border-radius: 0 0 10px 10px;
+	bottom: 1px;
+	display: table;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	height: 60px;
+	left: 3px;
+	margin: 0;
+	position: absolute;
+	text-align: center;
+	width: 294px;
+}
+
+.card__title__text {
+	color: white;
+	display: table-cell;
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+@media only screen and (max-width : 800px) {
+	.card {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+
+	.card:first-of-type {
+		margin-left: auto;
+	}
+}

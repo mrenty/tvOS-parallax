@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="msapplication-tap-highlight" content="no" />
+
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement('figure');
+				document.createElement('figcaption');
+			</script>
+		<![endif]-->
+
+		<script src="script.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				
+				var cards = document.getElementsByClassName('card');
+
+				for (var i = cards.length - 1; i >= 0; i--) {
+					cards[i] = new Card();
+
+					cards[i].addEventListener('mousemove', function(e) {
+						var card = this;
+						card = new Card();
+						card.hover(e);
+					});
+
+					cards[i].addEventListener('mouseleave', function(e) {
+						var card = this;
+						card = new Card();
+						card.reset(e);
+					});
+				};
+			});
+		</script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="cardwrapper" class="wrapper">
+			<a class="card" href="#">
+				<figure class="layer2 card__title">
+					<figcaption class="layer3 card__title__text">Project 1</figcaption>
+				</figure>
+			</a>
+			<a class="card" href="#">
+				<figure class="layer2 card__title">
+					<figcaption class="layer3 card__title__text">Project 2</figcaption>
+				</figure>
+			</a>
+			<a class="card" href="#">
+				<figure class="layer2 card__title">
+					<figcaption class="layer3 card__title__text">Project 3</figcaption>
+				</figure>
+			</a>
+		</div>
+	</body>
+</html>
