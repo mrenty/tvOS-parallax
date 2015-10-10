@@ -18,17 +18,15 @@
 				var cards = document.getElementsByClassName('card');
 
 				for (var i = cards.length - 1; i >= 0; i--) {
-					cards[i] = new Card();
+
+					var card = cards[i];
+					card = new Card();
 
 					cards[i].addEventListener('mousemove', function(e) {
-						var card = this;
-						card = new Card();
 						card.hover(e);
 					});
 
 					cards[i].addEventListener('mouseleave', function(e) {
-						var card = this;
-						card = new Card();
 						card.reset(e);
 					});
 				};
