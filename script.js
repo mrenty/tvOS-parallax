@@ -18,14 +18,14 @@
 
 			card.style.setProperty('-webkit-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
 			card.style.setProperty('transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
-			card.style.transition = 'all 0s';
+			card.style.transition = '-webkit-transform 0s, transform 0s';
 		};
 
 		Card.prototype.reset = function(e) {
 			var card = e.currentTarget;
 			 card.style.setProperty('-webkit-transform', 'rotate3d(0, 0, 0, 0deg)');
 			 card.style.setProperty('transform', 'rotate3d(0, 0, 0, 0deg)');
-			 card.style.transition = 'all .5s';
+			 card.style.transition = '-webkit-transform .5s, transform .5s';
 		};
 	}
 }());
