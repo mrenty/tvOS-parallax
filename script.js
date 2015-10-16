@@ -7,7 +7,7 @@
 			var cardRect = card.getBoundingClientRect();
 
 			var cx = Math.ceil(cardRect.left - bodyRect.left + (cardRect.width / 2.0));
-			var cy = Math.ceil(cardRect.top - bodyRect.top + (cardRect.height / 2.0));
+			var cy = Math.ceil(cardRect.top - (bodyRect.top + window.scrollY) + (cardRect.height / 2.0));
 			var dx = e.clientX - cx;
 			var dy = e.clientY - cy;
 
