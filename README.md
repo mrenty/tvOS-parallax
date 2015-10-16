@@ -6,13 +6,19 @@ A simple javascript plugin to recreate the tvOS parallax effect.
 ### Usage
 
 To initiate an element you simply can do
-	element = new Card();
+```javascript
+element = new Card();
+```
 
 To apply the interaction to the element you can add the hover method and pass a custom integer to modify the slack of the animation.
-	element.hover(e, CUSTOM_INT);
+```javascript
+element.hover(e, CUSTOM_INT);
+```
 
 To reset the element use
-	element.reset(e);
+```javascript
+element.reset(e);
+```
 
 ### Browser support
 
